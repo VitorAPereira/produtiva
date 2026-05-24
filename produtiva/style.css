@@ -11,6 +11,8 @@ color:white;
 overflow-x:hidden;
 }
 
+/* SIDEBAR */
+
 .sidebar{
 width:260px;
 height:100vh;
@@ -44,7 +46,15 @@ border:none;
 border-radius:14px;
 color:white;
 cursor:pointer;
+font-weight:600;
+transition:0.3s;
 }
+
+.sidebar button:hover{
+background:#ff2d2d;
+}
+
+/* HEADER */
 
 header{
 position:fixed;
@@ -72,6 +82,8 @@ align-items:center;
 gap:15px;
 }
 
+/* BOTÕES */
+
 .menu-toggle,
 .back-button{
 height:50px;
@@ -85,11 +97,15 @@ font-weight:700;
 cursor:pointer;
 }
 
+/* LOGO */
+
 .logo{
 font-size:34px;
 font-weight:800;
 color:#ff2d2d;
 }
+
+/* SEARCH */
 
 .search-box{
 display:flex;
@@ -116,6 +132,8 @@ color:white;
 cursor:pointer;
 }
 
+/* ACTIONS */
+
 .header-actions{
 display:flex;
 gap:12px;
@@ -131,10 +149,14 @@ color:white;
 cursor:pointer;
 }
 
+/* MAIN */
+
 .main-content{
 padding-top:120px;
 padding-inline:35px;
 }
+
+/* BANNER */
 
 .banner{
 height:420px;
@@ -172,6 +194,8 @@ color:#d0d0d0;
 line-height:1.7;
 }
 
+/* SECTION */
+
 .section{
 margin-bottom:50px;
 }
@@ -181,6 +205,8 @@ font-size:32px;
 margin-bottom:25px;
 }
 
+/* GRID */
+
 .products-grid{
 display:grid;
 
@@ -189,6 +215,8 @@ repeat(auto-fit,minmax(180px,1fr));
 
 gap:16px;
 }
+
+/* CARD */
 
 .product-card{
 background:#0d0d0d;
@@ -218,6 +246,8 @@ padding:0 14px 14px;
 color:#c0c0c0;
 font-size:14px;
 }
+
+/* LINK */
 
 .product-link{
 text-decoration:none;
@@ -284,6 +314,8 @@ background:#ff2d2d;
 color:white;
 }
 
+/* COMMENTS */
+
 .comments{
 margin-bottom:50px;
 }
@@ -312,6 +344,8 @@ background:#111;
 padding:20px;
 border-radius:18px;
 }
+
+/* RESPONSIVO */
 
 @media(max-width:900px){
 
