@@ -273,7 +273,7 @@ repeat(auto-fit,minmax(220px,200px));
 
 justify-content:flex-start;
 
-gap:3px;
+gap:1px;
 }
 
 /* CARD */
