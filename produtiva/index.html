@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SELETO</title>
@@ -29,7 +28,7 @@
 Categorias
 </h3>
 
-<button class="close-sidebar" onclick="toggleSidebar()">
+<button onclick="toggleSidebar()">
 ✕
 </button>
 
@@ -37,6 +36,10 @@ Categorias
 
 <button onclick="filterCategory('todos')">
 Todos
+</button>
+
+<button onclick="filterCategory('gamer')">
+Gamer
 </button>
 
 <button onclick="filterCategory('moda')">
@@ -51,22 +54,6 @@ Tecnologia
 Casa
 </button>
 
-<button onclick="filterCategory('cozinha')">
-Cozinha
-</button>
-
-<button onclick="filterCategory('acessorios')">
-Acessórios
-</button>
-
-<button onclick="filterCategory('gamer')">
-Gamer
-</button>
-
-<button onclick="filterCategory('fitness')">
-Fitness
-</button>
-
 </aside>
 
 <!-- HEADER -->
@@ -74,8 +61,6 @@ Fitness
 <header>
 
 <div class="topbar">
-
-<!-- LEFT -->
 
 <div class="left-header">
 
@@ -88,8 +73,6 @@ SELETO
 </div>
 
 </div>
-
-<!-- SEARCH -->
 
 <div class="search-box">
 
@@ -106,8 +89,6 @@ onkeyup="searchProducts()"
 
 </div>
 
-<!-- ACTIONS -->
-
 <div class="header-actions">
 
 <button>
@@ -115,7 +96,7 @@ onkeyup="searchProducts()"
 </button>
 
 <button>
-👤 Entrar
+👤 Login
 </button>
 
 </div>
@@ -147,102 +128,25 @@ VERIFICADOS.
 </h1>
 
 <p>
-Descubra produtos confiáveis, avaliados e recomendados.
+
+Produtos analisados,
+seguros e recomendados.
+
 </p>
 
 </div>
 
 </section>
 
-<!-- PRODUTOS -->
+<!-- CATALOGO -->
 
 <section class="section">
 
 <h2>
-Mais Vendidos
+Setup Gamer
 </h2>
 
 <div class="products-grid">
-
-<!-- CARD -->
-
-<div class="product-card tecnologia">
-
-<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200">
-
-<h3>
-Headphone Premium
-</h3>
-
-<p>
-Produto tecnológico confiável.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="product-card moda">
-
-<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200">
-
-<h3>
-Streetwear Premium
-</h3>
-
-<p>
-Moda urbana moderna.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="product-card casa">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200">
-
-<h3>
-Decoração Moderna
-</h3>
-
-<p>
-Itens modernos para casa.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="product-card cozinha">
-
-<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200">
-
-<h3>
-Utensílios Premium
-</h3>
-
-<p>
-Produtos gourmet.
-</p>
-
-</div>
-
-<!-- CARD -->
-
-<div class="product-card acessorios">
-
-<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=1200">
-
-<h3>
-Relógio Luxo
-</h3>
-
-<p>
-Acessório sofisticado.
-</p>
-
-</div>
 
 <!-- CARD -->
 
@@ -257,24 +161,25 @@ Setup Gamer
 </h3>
 
 <p>
-Equipamentos gamers premium.
+Monte seu setup ideal.
 </p>
 
 </div>
+
 </a>
 
 <!-- CARD -->
 
-<div class="product-card fitness">
+<div class="product-card moda">
 
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200">
 
 <h3>
-Fitness Pro
+Streetwear
 </h3>
 
 <p>
-Academia e saúde.
+Moda premium.
 </p>
 
 </div>
@@ -286,7 +191,7 @@ Academia e saúde.
 <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200">
 
 <h3>
-Smartphone Ultra
+Smartphone
 </h3>
 
 <p>

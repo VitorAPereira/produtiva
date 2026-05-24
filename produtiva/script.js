@@ -1,5 +1,3 @@
-/* SIDEBAR */
-
 function toggleSidebar(){
 
 document
@@ -7,8 +5,6 @@ document
 .classList.toggle("active");
 
 }
-
-/* FILTRO */
 
 function filterCategory(category){
 
@@ -38,8 +34,6 @@ card.style.display = "none";
 
 }
 
-/* PESQUISA */
-
 function searchProducts(){
 
 let input = document
@@ -67,3 +61,60 @@ card.style.display = "none";
 });
 
 }
+
+/* COMENTARIOS */
+
+function addComment(){
+
+let input = document
+.getElementById("commentInput");
+
+if(input.value.trim() === "") return;
+
+let comments = JSON.parse(
+localStorage.getItem("comments")
+) || [];
+
+comments.push(input.value);
+
+localStorage.setItem(
+"comments",
+JSON.stringify(comments)
+);
+
+renderComments();
+
+input.value = "";
+
+}
+
+function renderComments(){
+
+let comments = JSON.parse(
+localStorage.getItem("comments")
+) || [];
+
+let list = document
+.getElementById("commentsList");
+
+if(!list) return;
+
+list.innerHTML = "";
+
+comments.forEach(comment => {
+
+list.innerHTML += `
+
+<div class="comment">
+
+${comment}
+
+</div>
+
+`;
+
+});
+
+}
+
+renderComments();
