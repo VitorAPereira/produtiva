@@ -19,12 +19,6 @@
 
 <body>
 
-<!-- MENU BUTTON -->
-
-<button class="menu-toggle" onclick="toggleSidebar()">
-☰ Categorias
-</button>
-
 <!-- SIDEBAR -->
 
 <aside class="sidebar" id="sidebar">
@@ -81,9 +75,21 @@ Fitness
 
 <div class="topbar">
 
+<!-- LEFT -->
+
+<div class="left-header">
+
+<button class="menu-toggle" onclick="toggleSidebar()">
+☰ Categorias
+</button>
+
 <div class="logo">
 SELETO
 </div>
+
+</div>
+
+<!-- SEARCH -->
 
 <div class="search-box">
 
@@ -100,13 +106,15 @@ onkeyup="searchProducts()"
 
 </div>
 
+<!-- ACTIONS -->
+
 <div class="header-actions">
 
-<button onclick="openPage('favorites-page')">
+<button>
 ❤ Favoritos
 </button>
 
-<button onclick="openPage('login-page')">
+<button>
 👤 Entrar
 </button>
 
@@ -116,9 +124,9 @@ onkeyup="searchProducts()"
 
 </header>
 
-<!-- HOME -->
+<!-- MAIN -->
 
-<main class="main-content page active" id="home-page">
+<main class="main-content">
 
 <!-- BANNER -->
 
@@ -154,17 +162,13 @@ VER OFERTAS
 
 <section class="section">
 
-<div class="section-header">
-
 <h2>
 Mais Vendidos
 </h2>
 
-</div>
-
 <div class="products-grid">
 
-<!-- 1 -->
+<!-- CARD -->
 
 <div class="product-card tecnologia">
 
@@ -180,7 +184,7 @@ Produto tecnológico confiável.
 
 </div>
 
-<!-- 2 -->
+<!-- CARD -->
 
 <div class="product-card moda">
 
@@ -196,7 +200,7 @@ Moda urbana moderna.
 
 </div>
 
-<!-- 3 -->
+<!-- CARD -->
 
 <div class="product-card casa">
 
@@ -212,7 +216,7 @@ Itens modernos para casa.
 
 </div>
 
-<!-- 4 -->
+<!-- CARD -->
 
 <div class="product-card cozinha">
 
@@ -228,7 +232,7 @@ Produtos gourmet.
 
 </div>
 
-<!-- 5 -->
+<!-- CARD -->
 
 <div class="product-card acessorios">
 
@@ -244,7 +248,7 @@ Acessório sofisticado.
 
 </div>
 
-<!-- 6 -->
+<!-- CARD -->
 
 <div class="product-card gamer">
 
@@ -260,7 +264,7 @@ Equipamentos gamers premium.
 
 </div>
 
-<!-- 7 -->
+<!-- CARD -->
 
 <div class="product-card fitness">
 
@@ -276,7 +280,7 @@ Academia e saúde.
 
 </div>
 
-<!-- 8 -->
+<!-- CARD -->
 
 <div class="product-card tecnologia">
 
@@ -288,70 +292,6 @@ Smartphone Ultra
 
 <p>
 Tecnologia moderna.
-</p>
-
-</div>
-
-<!-- 9 -->
-
-<div class="product-card casa">
-
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200">
-
-<h3>
-Quarto Premium
-</h3>
-
-<p>
-Conforto e elegância.
-</p>
-
-</div>
-
-<!-- 10 -->
-
-<div class="product-card cozinha">
-
-<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1200">
-
-<h3>
-Cozinha Gourmet
-</h3>
-
-<p>
-Itens sofisticados.
-</p>
-
-</div>
-
-<!-- 11 -->
-
-<div class="product-card acessorios">
-
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200">
-
-<h3>
-Óculos Moderno
-</h3>
-
-<p>
-Estilo premium.
-</p>
-
-</div>
-
-<!-- 12 -->
-
-<div class="product-card moda">
-
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200">
-
-<h3>
-Moda Feminina
-</h3>
-
-<p>
-Tendências atuais.
 </p>
 
 </div>
