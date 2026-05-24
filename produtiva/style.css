@@ -298,9 +298,9 @@ transform:translateY(-5px);
 }
 
 .product-card img{
-width:100%;
+width:70%;
 
-height:55%;
+height:40%;
 
 object-fit:cover;
 }
