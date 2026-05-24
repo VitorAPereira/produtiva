@@ -269,7 +269,7 @@ margin-bottom:25px;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(200px,180px));
+repeat(auto-fit,minmax(220px,200px));
 
 justify-content:flex-start;
 
