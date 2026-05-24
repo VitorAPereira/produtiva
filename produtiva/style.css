@@ -16,13 +16,19 @@ overflow-x:hidden;
 .sidebar{
 width:260px;
 height:100vh;
+
 background:#0d0d0d;
+
 padding:30px 20px;
+
 position:fixed;
 left:-300px;
 top:0;
+
 overflow:auto;
+
 transition:0.4s ease;
+
 z-index:1500;
 }
 
@@ -34,19 +40,27 @@ left:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
+
 margin-bottom:25px;
 }
 
 .sidebar button{
 width:100%;
 height:52px;
+
 margin-bottom:14px;
+
 background:#181818;
+
 border:none;
 border-radius:14px;
+
 color:white;
-cursor:pointer;
+
 font-weight:600;
+
+cursor:pointer;
+
 transition:0.3s;
 }
 
@@ -61,24 +75,32 @@ position:fixed;
 top:0;
 left:0;
 right:0;
+
 height:90px;
+
 background:#050505;
+
 z-index:999;
+
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .topbar{
 height:100%;
+
 padding:0 40px;
+
 display:flex;
 align-items:center;
 justify-content:space-between;
+
 gap:20px;
 }
 
 .left-header{
 display:flex;
 align-items:center;
+
 gap:15px;
 }
 
@@ -87,13 +109,19 @@ gap:15px;
 .menu-toggle,
 .back-button{
 height:50px;
+
 padding:0 18px;
+
 border:none;
 border-radius:14px;
+
 background:#ff2d2d;
+
 color:white;
+
 font-size:15px;
 font-weight:700;
+
 cursor:pointer;
 }
 
@@ -102,6 +130,7 @@ cursor:pointer;
 .logo{
 font-size:34px;
 font-weight:800;
+
 color:#ff2d2d;
 }
 
@@ -109,26 +138,38 @@ color:#ff2d2d;
 
 .search-box{
 display:flex;
+
 width:450px;
+
 background:#111;
+
 border-radius:14px;
+
 overflow:hidden;
 }
 
 .search-box input{
 width:100%;
+
 padding:15px;
+
 background:transparent;
+
 border:none;
 outline:none;
+
 color:white;
 }
 
 .search-box button{
 width:60px;
+
 background:#ff2d2d;
+
 border:none;
+
 color:white;
+
 cursor:pointer;
 }
 
@@ -136,16 +177,22 @@ cursor:pointer;
 
 .header-actions{
 display:flex;
+
 gap:12px;
 }
 
 .header-actions button{
 height:48px;
+
 padding:0 18px;
+
 border:none;
 border-radius:12px;
+
 background:#181818;
+
 color:white;
+
 cursor:pointer;
 }
 
@@ -160,9 +207,13 @@ padding-inline:35px;
 
 .banner{
 height:420px;
+
 border-radius:30px;
+
 overflow:hidden;
+
 position:relative;
+
 margin-bottom:40px;
 
 background:
@@ -173,15 +224,20 @@ center/cover;
 
 .banner-content{
 position:absolute;
+
 left:50px;
 top:50%;
+
 transform:translateY(-50%);
+
 max-width:500px;
 }
 
 .banner h1{
 font-size:68px;
+
 line-height:68px;
+
 margin-bottom:20px;
 }
 
@@ -191,6 +247,7 @@ color:#ff2d2d;
 
 .banner p{
 color:#d0d0d0;
+
 line-height:1.7;
 }
 
@@ -202,6 +259,7 @@ margin-bottom:50px;
 
 .section h2{
 font-size:32px;
+
 margin-bottom:25px;
 }
 
@@ -211,19 +269,28 @@ margin-bottom:25px;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(180px,1fr));
+repeat(auto-fit,minmax(170px,1fr));
 
-gap:16px;
+gap:14px;
 }
 
 /* CARD */
 
 .product-card{
 background:#0d0d0d;
+
 border-radius:22px;
+
 overflow:hidden;
+
 cursor:pointer;
+
 transition:0.3s;
+
+aspect-ratio:1/1;
+
+display:flex;
+flex-direction:column;
 }
 
 .product-card:hover{
@@ -232,26 +299,32 @@ transform:translateY(-5px);
 
 .product-card img{
 width:100%;
-height:180px;
+height:65%;
+
 object-fit:cover;
 }
 
 .product-card h3{
-padding:14px 14px 6px;
-font-size:18px;
+padding:12px 12px 4px;
+
+font-size:17px;
 }
 
 .product-card p{
-padding:0 14px 14px;
+padding:0 12px 12px;
+
 color:#c0c0c0;
-font-size:14px;
+
+font-size:13px;
 }
 
-/* LINK */
+/* LINKS */
 
 .product-link{
 text-decoration:none;
+
 color:white;
+
 display:block;
 }
 
@@ -259,36 +332,47 @@ display:block;
 
 .product-page{
 display:grid;
+
 grid-template-columns:1fr 1fr;
+
 gap:40px;
+
 margin-bottom:50px;
 }
 
 .main-product-image{
 width:100%;
+
 height:600px;
+
 object-fit:cover;
+
 border-radius:24px;
 }
 
 .product-info-page h1{
 font-size:48px;
+
 margin-bottom:15px;
 }
 
 .category{
 color:#ff2d2d;
+
 margin-bottom:20px;
 }
 
 .description{
 color:#c0c0c0;
+
 line-height:1.8;
+
 margin-bottom:30px;
 }
 
 .product-buttons{
 display:flex;
+
 gap:15px;
 }
 
@@ -296,10 +380,14 @@ gap:15px;
 .buy-btn,
 .comment-btn{
 height:52px;
+
 padding:0 25px;
+
 border:none;
 border-radius:14px;
+
 font-weight:700;
+
 cursor:pointer;
 }
 
@@ -322,26 +410,37 @@ margin-bottom:50px;
 
 .comments textarea{
 width:100%;
+
 height:140px;
+
 background:#111;
+
 border:none;
 border-radius:18px;
+
 padding:20px;
+
 color:white;
+
 resize:none;
+
 margin:20px 0;
 }
 
 #commentsList{
 display:flex;
 flex-direction:column;
+
 gap:15px;
+
 margin-top:20px;
 }
 
 .comment{
 background:#111;
+
 padding:20px;
+
 border-radius:18px;
 }
 
@@ -359,7 +458,9 @@ grid-template-columns:1fr;
 
 .topbar{
 padding:15px 20px;
+
 flex-direction:column;
+
 height:auto;
 }
 
@@ -369,6 +470,7 @@ width:100%;
 
 .main-content{
 padding-top:190px;
+
 padding-inline:20px;
 }
 
@@ -379,17 +481,25 @@ height:500px;
 .banner-content{
 left:30px;
 right:30px;
+
 max-width:100%;
 }
 
 .banner h1{
 font-size:40px;
+
 line-height:42px;
 }
 
 .left-header{
 width:100%;
+
 justify-content:space-between;
+}
+
+.products-grid{
+grid-template-columns:
+repeat(2,1fr);
 }
 
 }
