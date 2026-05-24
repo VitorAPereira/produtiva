@@ -269,7 +269,9 @@ margin-bottom:25px;
 display:grid;
 
 grid-template-columns:
-repeat(auto-fit,minmax(170px,1fr));
+repeat(auto-fit,minmax(140px,160px));
+
+justify-content:flex-start;
 
 gap:14px;
 }
