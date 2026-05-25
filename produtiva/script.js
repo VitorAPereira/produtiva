@@ -6,33 +6,66 @@ document
 
 }
 
-function filterCategory(category){
+/* RENDERIZAR */
 
-let cards = document
-.querySelectorAll(".product-card");
+function renderProducts(lista){
 
-cards.forEach(card => {
+const grid = document
+.getElementById("productsGrid");
 
-if(category === "todos"){
+if(!grid) return;
 
-card.style.display = "block";
-return;
+grid.innerHTML = "";
 
-}
+lista.forEach(produto => {
 
-if(card.classList.contains(category)){
+grid.innerHTML += `
 
-card.style.display = "block";
+<a href="produto.html?id=${produto.id}" class="product-link">
 
-}else{
+<div class="product-card">
 
-card.style.display = "none";
+<img src="${produto.imagem}">
 
-}
+<h3>
+${produto.nome}
+</h3>
+
+<p>
+${produto.descricao}
+</p>
+
+</div>
+
+</a>
+
+`;
 
 });
 
 }
+
+/* FILTRO */
+
+function filterCategory(category){
+
+if(category === "todos"){
+
+renderProducts(produtos);
+
+return;
+
+}
+
+const filtrados = produtos.filter(produto =>
+produto.categoria === category
+);
+
+renderProducts(filtrados);
+
+}
+
+/* PESQUISA */
 
 function searchProducts(){
 
@@ -41,33 +74,166 @@ let input = document
 .value
 .toLowerCase();
 
-let cards = document
-.querySelectorAll(".product-card");
+const filtrados = produtos.filter(produto =>
 
-cards.forEach(card => {
+produto.nome
+.toLowerCase()
+.includes(input)
 
-let text = card.innerText.toLowerCase();
+);
 
-if(text.includes(input)){
-
-card.style.display = "block";
-
-}else{
-
-card.style.display = "none";
+renderProducts(filtrados);
 
 }
+
+/* FAVORITOS */
+
+function favoriteCurrentProduct(){
+
+const params = new URLSearchParams(window.location.search);
+
+const id = Number(params.get("id"));
+
+const produto = produtos.find(p => p.id === id);
+
+let favoritos = JSON.parse(
+localStorage.getItem("favoritos")
+) || [];
+
+const existe = favoritos.find(f => f.id === produto.id);
+
+if(!existe){
+
+favoritos.push(produto);
+
+localStorage.setItem(
+"favoritos",
+JSON.stringify(favoritos)
+);
+
+alert("Produto favoritado!");
+
+}
+
+}
+
+/* MOSTRAR FAVORITOS */
+
+function renderFavorites(){
+
+const grid = document
+.getElementById("favoritesGrid");
+
+if(!grid) return;
+
+let favoritos = JSON.parse(
+localStorage.getItem("favoritos")
+) || [];
+
+grid.innerHTML = "";
+
+favoritos.forEach(produto => {
+
+grid.innerHTML += `
+
+<a href="produto.html?id=${produto.id}" class="product-link">
+
+<div class="product-card">
+
+<img src="${produto.imagem}">
+
+<h3>
+${produto.nome}
+</h3>
+
+<p>
+${produto.descricao}
+</p>
+
+</div>
+
+</a>
+
+`;
 
 });
 
 }
 
-/* COMENTARIOS */
+/* PRODUTO */
+
+function loadProduct(){
+
+const params = new URLSearchParams(window.location.search);
+
+const id = Number(params.get("id"));
+
+const produto = produtos.find(p => p.id === id);
+
+if(!produto) return;
+
+document.getElementById("productName").innerText =
+produto.nome;
+
+document.getElementById("productCategory").innerText =
+produto.categoria;
+
+document.getElementById("productDescription").innerText =
+produto.descricao;
+
+document.getElementById("productImage").src =
+produto.imagem;
+
+/* SEMELHANTES */
+
+const similares = produtos.filter(p =>
+p.categoria === produto.categoria &&
+p.id !== produto.id
+);
+
+const grid = document
+.getElementById("similarProducts");
+
+if(grid){
+
+similares.forEach(prod => {
+
+grid.innerHTML += `
+
+<a href="produto.html?id=${prod.id}" class="product-link">
+
+<div class="product-card">
+
+<img src="${prod.imagem}">
+
+<h3>
+${prod.nome}
+</h3>
+
+<p>
+${prod.descricao}
+</p>
+
+</div>
+
+</a>
+
+`;
+
+});
+
+}
+
+}
+
+/* COMENTÁRIOS */
 
 function addComment(){
 
 let input = document
 .getElementById("commentInput");
+
+if(!input) return;
 
 if(input.value.trim() === "") return;
 
@@ -117,4 +283,12 @@ ${comment}
 
 }
 
+/* INIT */
+
+renderProducts(produtos);
+
+renderFavorites();
+
 renderComments();
+
+loadProduct();
