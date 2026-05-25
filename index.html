@@ -4,11 +4,12 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SELETO</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -18,60 +19,12 @@
 
 <body>
 
-<!-- SIDEBAR -->
-
-<aside class="sidebar" id="sidebar">
-
-<div class="sidebar-header">
-
-<h3>
-Categorias
-</h3>
-
-<button onclick="toggleSidebar()">
-✕
-</button>
-
-</div>
-
-<button onclick="filterCategory('todos')">
-Todos
-</button>
-
-<button onclick="filterCategory('gamer')">
-Gamer
-</button>
-
-<button onclick="filterCategory('moda')">
-Moda
-</button>
-
-<button onclick="filterCategory('tecnologia')">
-Tecnologia
-</button>
-
-<button onclick="filterCategory('casa')">
-Casa
-</button>
-
-</aside>
-
-<!-- HEADER -->
-
 <header>
 
 <div class="topbar">
 
-<div class="left-header">
-
-<button class="menu-toggle" onclick="toggleSidebar()">
-☰ Categorias
-</button>
-
 <div class="logo">
 SELETO
-</div>
-
 </div>
 
 <div class="search-box">
@@ -91,17 +44,21 @@ onkeyup="searchProducts()"
 
 <div class="header-actions">
 
-<a href="favoritos.html">
+<a href="login.html">
 
-<button>
-❤ Favoritos
+<button class="login-btn">
+👤 Login
 </button>
 
 </a>
 
-<button>
-👤 Login
+<a href="favoritos.html">
+
+<button class="favorite-header-btn">
+❤ Favoritos
 </button>
+
+</a>
 
 </div>
 
@@ -109,11 +66,7 @@ onkeyup="searchProducts()"
 
 </header>
 
-<!-- MAIN -->
-
 <main class="main-content">
-
-<!-- BANNER -->
 
 <section class="banner">
 
@@ -126,28 +79,31 @@ OS MELHORES<br>
 PRODUTOS<br>
 
 <span>
-VERIFICADOS.
+VERIFICADOS
 </span>
 
 </h1>
 
 <p>
-
-Produtos analisados,
-seguros e recomendados.
-
+Produtos recomendados e organizados.
 </p>
+
+<a href="catalogos.html">
+
+<button class="buy-btn">
+VER CATÁLOGOS
+</button>
+
+</a>
 
 </div>
 
 </section>
 
-<!-- CATALOGO -->
-
 <section class="section">
 
 <h2>
-Catálogo
+Produtos em Destaque
 </h2>
 
 <div class="products-grid" id="productsGrid">
@@ -158,8 +114,8 @@ Catálogo
 
 </main>
 
-<script src="produtos.js"></script>
-<script src="script.js"></script>
+<script src="js/produtos.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 
